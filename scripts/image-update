@@ -242,12 +242,6 @@ function set_image_values() {
     esac
     elif [[ "${DISTRO_NAME}" == "rocky" ]]; then
     case $RELEASE_NAME in
-    8)
-      file_name="Rocky-8-GenericCloud-Base.latest.x86_64.qcow2"
-      remote_url="https://dl.rockylinux.org/pub/rocky/8/images/x86_64/Rocky-8-GenericCloud-Base.latest.x86_64.qcow2"
-      remote_shasum_url="https://dl.rockylinux.org/pub/rocky/8/images/x86_64/CHECKSUM"
-      shasum_algorithm="256"
-      ;;
     9)
       file_name="Rocky-9-GenericCloud-Base.latest.x86_64.qcow2"
       remote_url="https://dl.rockylinux.org/pub/rocky/9/images/x86_64/Rocky-9-GenericCloud-Base.latest.x86_64.qcow2"
@@ -261,7 +255,7 @@ function set_image_values() {
       shasum_algorithm="256"
       ;;
     *)
-      err "Unknown distro, only works for Rocky 8+"
+      err "Unknown distro, only works for Rocky 9+"
       ;;
     esac
   elif [[ "${DISTRO_NAME}" == "ubuntu" ]]; then
